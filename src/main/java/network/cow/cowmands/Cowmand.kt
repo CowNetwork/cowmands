@@ -86,9 +86,7 @@ abstract class Cowmand {
             traverse({ cmd, args ->
                 val completions = cmd.tabComplete(sender, args)
 
-                if (args.isEmpty()) {
-                    list.addAll(completions)
-                } else {
+                if (!args.isEmpty()) {
                     StringUtil.copyPartialMatches(args[0], completions, list)
                 }
             }, { handleError(sender, args, it) })
