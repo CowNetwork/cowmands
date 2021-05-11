@@ -53,7 +53,9 @@ abstract class Cowmand {
     /**
      * Only completes at this level. The args are already sliced.
      */
-    open fun tabComplete(sender: CommandSender, args: Arguments) = subCommandsLabels()
+    open fun tabComplete(sender: CommandSender, args: Arguments) = if (args.size == 1) {
+        subCommandsLabels()
+    } else emptyList()
 
     /**
      * Will be called, when an error occurs during the execution of the command.
