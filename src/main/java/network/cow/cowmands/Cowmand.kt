@@ -89,7 +89,9 @@ abstract class Cowmand {
                 val completions = cmd.tabComplete(sender, args)
 
                 if (!args.isEmpty()) {
-                    StringUtil.copyPartialMatches(args[0], completions, list)
+                    val cursor = args.last()
+
+                    StringUtil.copyPartialMatches(cursor, completions, list)
                 }
             }, { handleError(sender, args, it) })
             return list

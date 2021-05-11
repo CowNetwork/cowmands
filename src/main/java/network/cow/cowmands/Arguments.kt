@@ -32,6 +32,8 @@ class Arguments(private val list: List<String>) {
         return Arguments(list.slice(fromIndex until list.size))
     }
 
+    fun last() = this.list.last()
+
     override fun toString(): String {
         return list.toString()
     }
