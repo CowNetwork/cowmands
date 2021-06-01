@@ -10,9 +10,9 @@ First add following dependency to your `pom.xml`:
 ```xml
 <dependencies>
   <dependency>
-    <groupId>network.cow</groupId>
+    <groupId>network.cow.mc</groupId>
     <artifactId>cowmands</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
   </dependency>
 </dependencies>
 ```
